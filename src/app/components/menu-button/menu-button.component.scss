@@ -1,0 +1,19 @@
+.container {
+    position: relative;
+    ion-menu-button {
+        color: #06a6ce;
+    }
+    
+    ion-badge {
+        position: absolute;
+        transform: scale(0.8);
+        top: -5px;
+        right: -5px;
+        /*
+        width: 22px;
+        height: 22px;
+        line-height: 16px;
+        */
+        pointer-events: none;
+    }
+}

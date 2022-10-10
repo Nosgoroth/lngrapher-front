@@ -27,14 +27,6 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ],
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
         ]
       }
     },

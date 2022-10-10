@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <app-menu-button></app-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="series">{{ series.title }}</ion-title>
+    <ion-title *ngIf="!series">Series</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ng-container *ngIf="ready && series">
+
+    <p><small><em>(first volume cover here?)</em></small></p>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Title</ion-label>
+        {{ series.title }}
+      </ion-item>
+      <ion-item><ion-label>Category</ion-label> {{ series.category }}</ion-item>
+      <ion-item><ion-label>Language</ion-label> {{ series.language }}</ion-item>
+      <ion-item><ion-label>Publisher</ion-label> {{ series.publisher }}</ion-item>
+      <ion-item><ion-label>Label</ion-label> {{ series.label }}</ion-item>
+      <ion-item><ion-label>Volumes</ion-label> TODO</ion-item>
+      <ion-item><ion-label>Complete</ion-label> oh man, who the heck knows</ion-item>
+    </ion-list>
+
+    <h3>Graph</h3>
+
+    <app-series-graph></app-series-graph>
+
+    <h3>Volume covers</h3>
+
+    <ion-button (click)="showVolumeCovers()">Show volume covers</ion-button>
+
+    <h3>Related series</h3>
+
+    <ion-list>
+      <ion-item><ion-label>(Series title)<p>Original (jp)</p></ion-label></ion-item>
+      <ion-item><ion-label>(Series title)<p>Spinoff</p></ion-label></ion-item>
+    </ion-list>
+
+  </ng-container>
+
+  <ng-container *ngIf="error">
+    <p>An error ocurred</p>
+  </ng-container>
+
+</ion-content>

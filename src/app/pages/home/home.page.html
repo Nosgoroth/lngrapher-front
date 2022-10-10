@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <app-menu-button></app-menu-button>
+    </ion-buttons>
+    <ion-title>LN graphs thingy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p class="ion-padding">Welcome to this thing. Right now there's no data, just a very basic website with randomly generated mocks. You can try it out, but don't expect much. There's an about page if you want to know more. Run <code>clearMocks()</code> in the developer console and reload the page to regenerate the mocks.</p>
+
+  <ion-searchbar
+    placeholder="Series title"
+    show-clear-button="always"
+    [debounce]="500"
+    (ionChange)="onSearchChange($event)"
+    ></ion-searchbar>
+  <ng-container *ngIf="searching">
+    <ion-spinner></ion-spinner>
+  </ng-container>
+  <ng-container *ngIf="!searching && seriesResults && seriesResults.length">
+    <app-series-list [series]="seriesResults"></app-series-list>  
+  </ng-container>
+  <ng-container *ngIf="!searching && (!seriesResults || !seriesResults.length)">
+    <p class="ion-padding"><em>No results. Type in the search bar above.</em></p>
+  </ng-container>
+  
+
+</ion-content>

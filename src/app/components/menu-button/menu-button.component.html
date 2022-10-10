@@ -1,0 +1,8 @@
+<div class="container" *ngIf="!shouldShowBackButton">
+  <ion-menu-button></ion-menu-button>
+  <ion-badge color="danger" *ngIf="shouldDisplayNotificationCount">{{ notificationCount }}</ion-badge>
+</div>
+<ion-back-button *ngIf="shouldShowBackButton" text="Atrás"></ion-back-button>
+<!--
+<span [class.canGoBack]="canGoBack" [class.prefersBackAction]="prefersBackAction"></span>
+-->

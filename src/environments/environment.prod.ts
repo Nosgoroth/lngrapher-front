@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  generateMockOnIdCacheMiss: true,
+  mockData: true,
+  showInnerErrors: true
 };
