@@ -1,0 +1,7 @@
+{
+  "name": "lngrapher",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
