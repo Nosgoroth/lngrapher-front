@@ -12,7 +12,7 @@
 
   <ng-container *ngIf="ready && series">
 
-    <p><small><em>(first volume cover here?)</em></small></p>
+    <p class="ion-padding-horizontal"><small><em>(first volume cover here?)</em></small></p>
 
     <ion-list>
       <ion-item>
@@ -27,15 +27,20 @@
       <ion-item><ion-label>Complete</ion-label> oh man, who the heck knows</ion-item>
     </ion-list>
 
-    <h3>Graph</h3>
+    <div class="ion-padding-horizontal">
 
-    <app-series-graph></app-series-graph>
-
-    <h3>Volume covers</h3>
-
-    <ion-button (click)="showVolumeCovers()">Show volume covers</ion-button>
-
-    <h3>Related series</h3>
+      
+      <h3>Graph</h3>
+      
+      <app-series-graph></app-series-graph>
+      
+      <h3>Volume covers</h3>
+      
+      <ion-button (click)="showVolumeCovers()">Show volume covers</ion-button>
+      
+      <h3>Related series</h3>
+    
+    </div>
 
     <ion-list>
       <ion-item><ion-label>(Series title)<p>Original (jp)</p></ion-label></ion-item>

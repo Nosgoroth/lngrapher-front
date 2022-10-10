@@ -16,12 +16,12 @@ export class ApiService {
   }
 
   async getAllSeries(): Promise<Array<Series>> {
-    if (this.mock) { return seriesMock.multiple(20); }
+    if (this.mock) { return seriesMock.multiple(30); }
     return null;
   }
 
   async getSeriesBySearchString(searchString: string): Promise<Array<Series>> {
-    if (this.mock) { return seriesMock.multiple(10); }
+    if (this.mock) { return seriesMock.multiple(20); }
     return [
       { id: 1, title: 'Test', language: SeriesLanguage.english, category: SeriesCategory.lightNovel, }
     ];

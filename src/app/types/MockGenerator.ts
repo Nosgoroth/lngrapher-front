@@ -52,6 +52,8 @@ export function makeMockGenerator<T>(
             try {
                 localStorage.removeItem(this.lskey);
                 localStorage.removeItem(this.lskeyIds);
+                this.savedMockData = null;
+                this.savedMockDataIds = null;
             } catch (error) { }
         }
 

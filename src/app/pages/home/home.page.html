@@ -9,7 +9,7 @@
 
 <ion-content>
 
-  <p class="ion-padding">Welcome to this thing. Right now there's no data, just a very basic website with randomly generated mocks. You can try it out, but don't expect much. There's an about page if you want to know more. Run <code>clearMocks()</code> in the developer console and reload the page to regenerate the mocks.</p>
+  <p class="ion-padding">Welcome to this thing. Right now there's no data, just a very basic website with randomly generated mocks. You can try it out, but don't expect much. There's an about page if you want to know more.</p>
 
   <ion-searchbar
     placeholder="Series title"
@@ -21,6 +21,7 @@
     <ion-spinner></ion-spinner>
   </ng-container>
   <ng-container *ngIf="!searching && seriesResults && seriesResults.length">
+    <ion-button (click)="regenerateMocks()">Regenerate mocks</ion-button>
     <app-series-list [series]="seriesResults"></app-series-list>  
   </ng-container>
   <ng-container *ngIf="!searching && (!seriesResults || !seriesResults.length)">
